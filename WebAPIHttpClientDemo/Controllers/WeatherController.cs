@@ -33,7 +33,7 @@ namespace WebAPIHttpClientDemo.Controllers
             // Use the combined policy with the HttpClient
             HttpResponseMessage response = retryFallbackPolicy.ExecuteAsync(() =>
             {
-                return httpClient.GetAsync($"http://api.weatherapi.com/v1/current.json?key=00140c27b738416a80393748230608&q={city}&aqi=yes");
+                return httpClient.GetAsync($"http://api.weatherapi.com/v1/current.json?key=&q={city}&aqi=yes");
             }).Result;
 
             // Process the response
